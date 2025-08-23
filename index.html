@@ -8,17 +8,15 @@
     <title>LAYOUT LINGERIE</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
     <header>
         <!-- BARRA DE NAVEGAÇÃO -->
         <nav>
-            <div>
-                <a href="">LOGO</a>
-            </div>
-
-            <div>
+            <a href="" class="logo">LOGO</a>
+            <div class="navbar">
                 <ul>
                     <li><a href="">NEWS</a></li>
                     <li><a href="">CINTAS</a></li>
@@ -33,7 +31,7 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="iconOptions-nav">
                 <a href=""><img src="./imgs/icons/lupaIcon.png" alt="lupaIcon"></a>
                 <a href=""><img src="./imgs/icons/blackHeartIcon.png" alt="blackHeartIcon"></a>
                 <a href=""><img src="./imgs/icons/womenIcon.png" alt="womenIcon">Login|Cadastre-se</a>
@@ -44,186 +42,124 @@
 
     <main>
         <!-- PRIMEIRO BANNER -->
-        <section>
-            <div class="banners">
-                <!-- OPTION BUTTONS  -->
+        <section class="slider">
+            <div class="slides">
+                <!-- OPTION BUTTONS -->
                 <input type="radio" name="radio-btn" id="radio-01">
                 <input type="radio" name="radio-btn" id="radio-02">
                 <input type="radio" name="radio-btn" id="radio-03">
 
+
                 <!-- BANNERS -->
-                <div class="banner_01">
-                    <h1>BANNER 01</h1>
-                    <h3>(SLIDE)</h3>
+                <div class="slide first">
+                    <img src="./imgs/pictures/banner01.png" alt="banner">
                 </div>
 
-                <div class="banner">
-                    <h1>BANNER 02</h1>
-                    <h3>(SLIDE)</h3>
+                <div class="slide">
+                    <img src="./imgs/pictures/banner02.png" alt="banner">
                 </div>
 
-                <div class="banner">
-                    <h1>BANNER 03</h1>
-                    <h3>(SLIDE)</h3>
+                <div class="slide">
+                    <img src="./imgs/pictures/banner03.png" alt="banner">
                 </div>
 
-                <!-- NAVIGATION AUTO-->
+                <!-- NAVIGATION AUTO -->
                 <div class="navigation-auto">
                     <div class="auto-btn01"></div>
                     <div class="auto-btn02"></div>
                     <div class="auto-btn03"></div>
                 </div>
-            </div>
 
-            <!-- NAVIGATION MANUAL -->
-            <div class="navigation-manual">
-                <label for="radio-01" class="manual-btn"></label>
-                <label for="radio-02" class="manual-btn"></label>
-                <label for="radio-03" class="manual-btn"></label>
+                <!-- NAVIGATION MANUAL -->
+                <div class="navigation-manual">
+                    <label for="radio-01" class="manual-btn"></label>
+                    <label for="radio-02" class="manual-btn"></label>
+                    <label for="radio-03" class="manual-btn"></label>
+                </div>
             </div>
         </section>
 
         <!-- LANÇAMENTOS SECTION -->
-        <section>
+        <section class="carrosel-container">
             <h3>Lançamentos</h3>
-            <!-- OPTION BUTTONS -->
-            <div class="navigation">
-                <input type="radio" name="radio-btn" id="lanc-radio-01">
-                <input type="radio" name="radio-btn" id="lanc-radio-02">
-                <input type="radio" name="radio-btn" id="lanc-radio-03">
-            </div>
 
-            <div class="carrosel">
-                <div>
-                    <div>
-                        <p>Lançamento</p>
-                        <img src="./imgs/pictures/lingerie1.png" alt="lingerie1">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
+            <div class="carrosel-itens">
+                <button class="slider-arrow prev-arrow">&#10094</button>
+
+                <div class="carrosel-object">
+                    <!-- produtos -->
+                    <div class="carrosel-item">
+                        <div class="produto-image">
+                            <button class="tag-lancamento">Lançamento</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <a href="#"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                            <a href="#"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                        </div>
+
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
+
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-buy">COMPRE AGORA</button>
                     </div>
-                
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
+
+                    <div class="carrosel-item">
+                        <div class="produto-image">
+                            <button class="tag-lancamento">Lançamento</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <a href="#"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                            <a href="#"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                        </div>
+
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
+
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-buy">COMPRE AGORA</button>
                     </div>
-                
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
-                
-                        <button>COMPRE AGORA</button>
-                    </div>
+
+                    <button class="slider-arrow next-arrow">&#10095</button>
                 </div>
 
-                <div>
-                    <div>
-                        <p>Lançamento</p>
-                        <img src="./imgs/pictures/lingerie.png" alt="lingerie">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
-                    </div>
-                
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
-                    </div>
-                
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
-                
-                        <button>COMPRE AGORA</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <p>Lançamento</p>
-                        <img src="./imgs/pictures/lingerie1.png" alt="lingerie1">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
-                    </div>
-                
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
-                    </div>
-                
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
-                
-                        <button>COMPRE AGORA</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <p>Lançamento</p>
-                        <img src="./imgs/pictures/lingerie.png" alt="lingerie">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
-                    </div>
-                
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
-                    </div>
-                
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
-                
-                        <button>COMPRE AGORA</button>
-                    </div>
-                </div>
             </div>
 
             <a href="">Ver todos</a>
         </section>
 
         <!-- INFORMAÇÕES DE PAGAMENTO -->
-         <section>
+        <section>
             <div>
                 <img src="./imgs/icons/boxIcon.png" alt="boxIcon">
                 <p>FRETE GRÁTIS A PARTIR DE R$199 (SUDESTE) E R$299 (Brasil)</p>
@@ -243,13 +179,13 @@
                 <img src="./imgs/icons/cartaoIcon02.png" alt="cartaoIcon02">
                 <p>PAGAMENTO COM ATÉ 2 CARTÕES</p>
             </div>
-         </section>
+        </section>
 
         <!-- DESTAQUES SECTION -->
         <section>
             <h3>Destaques</h3>
 
-             <!-- OPTION BUTTONS -->
+            <!-- OPTION BUTTONS -->
             <div class="navigation">
                 <input type="radio" name="radio-btn" id="Destaq-radio-01">
                 <input type="radio" name="radio-btn" id="Destaq-radio-02">
@@ -264,7 +200,7 @@
                         <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
                         <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
@@ -274,7 +210,7 @@
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
                         </ul>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li>Lorem Ipsum quia dolor sit amet</li>
@@ -283,7 +219,7 @@
                             <li>no boleto</li>
                             <li>em até 10x de R$6,30</li>
                         </ul>
-                
+
                         <button>COMPRE AGORA</button>
                     </div>
                 </div>
@@ -295,7 +231,7 @@
                         <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
                         <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
@@ -305,7 +241,7 @@
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
                         </ul>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li>Lorem Ipsum quia dolor sit amet</li>
@@ -314,7 +250,7 @@
                             <li>no boleto</li>
                             <li>em até 10x de R$6,30</li>
                         </ul>
-                
+
                         <button>COMPRE AGORA</button>
                     </div>
                 </div>
@@ -326,7 +262,7 @@
                         <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
                         <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
@@ -336,7 +272,7 @@
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
                         </ul>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li>Lorem Ipsum quia dolor sit amet</li>
@@ -345,7 +281,7 @@
                             <li>no boleto</li>
                             <li>em até 10x de R$6,30</li>
                         </ul>
-                
+
                         <button>COMPRE AGORA</button>
                     </div>
                 </div>
@@ -357,7 +293,7 @@
                         <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
                         <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
@@ -367,7 +303,7 @@
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
                         </ul>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li>Lorem Ipsum quia dolor sit amet</li>
@@ -376,7 +312,7 @@
                             <li>no boleto</li>
                             <li>em até 10x de R$6,30</li>
                         </ul>
-                
+
                         <button>COMPRE AGORA</button>
                     </div>
                 </div>
@@ -386,7 +322,7 @@
         </section>
 
         <!-- INFORMAÇÕES CONTEÚDO -->
-         <section>
+        <section>
             <div>
                 <h1>Camisolas</h1>
                 <p>Para quem quer relaxar</p>
@@ -411,7 +347,7 @@
         <section>
             <h3>Outlet</h3>
 
-             <!-- OPTION BUTTONS -->
+            <!-- OPTION BUTTONS -->
             <div class="navigation">
                 <input type="radio" name="radio-btn" id="Outlet-radio-01">
                 <input type="radio" name="radio-btn" id="Outlet-radio-02">
@@ -426,7 +362,7 @@
                         <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
                         <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
@@ -436,7 +372,7 @@
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
                         </ul>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li>Lorem Ipsum quia dolor sit amet</li>
@@ -445,7 +381,7 @@
                             <li>no boleto</li>
                             <li>em até 10x de R$6,30</li>
                         </ul>
-                
+
                         <button>COMPRE AGORA</button>
                     </div>
                 </div>
@@ -457,7 +393,7 @@
                         <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
                         <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
@@ -467,7 +403,7 @@
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
                         </ul>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li>Lorem Ipsum quia dolor sit amet</li>
@@ -476,7 +412,7 @@
                             <li>no boleto</li>
                             <li>em até 10x de R$6,30</li>
                         </ul>
-                
+
                         <button>COMPRE AGORA</button>
                     </div>
                 </div>
@@ -488,7 +424,7 @@
                         <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
                         <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
@@ -498,7 +434,7 @@
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
                         </ul>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li>Lorem Ipsum quia dolor sit amet</li>
@@ -507,7 +443,7 @@
                             <li>no boleto</li>
                             <li>em até 10x de R$6,30</li>
                         </ul>
-                
+
                         <button>COMPRE AGORA</button>
                     </div>
                 </div>
@@ -519,7 +455,7 @@
                         <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
                         <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
@@ -529,7 +465,7 @@
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
                         </ul>
                     </div>
-                
+
                     <div>
                         <ul>
                             <li>Lorem Ipsum quia dolor sit amet</li>
@@ -538,7 +474,7 @@
                             <li>no boleto</li>
                             <li>em até 10x de R$6,30</li>
                         </ul>
-                
+
                         <button>COMPRE AGORA</button>
                     </div>
                 </div>
@@ -613,7 +549,7 @@
                             <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
                         </ul>
                     </div>
-                    
+
                     <p>"Lorem Ipsum is simply dummy text of the printing and typesetting"</p>
                 </div>
 
@@ -631,7 +567,7 @@
                     <label for="last-radio-04" class="manual-btn"></label>
                     <label for="last-radio-05" class="manual-btn"></label>
                     <label for="last-radio-06" class="manual-btn"></label>
-                </div>       
+                </div>
             </div>
         </section>
     </main>
@@ -720,16 +656,18 @@
         <!-- TERCEIRA SECTION DO FOOTER -->
         <section>
             <div>
-                <p>LOREM IPSUM COMERCIO DE VESTUÁRIO LTDA.|CNPJ:01.111.000/0001-01/RUA DAS COVES, 100, CENTRO, NOVA FRIBURGO/RJ-26.600-000</p>
+                <p>LOREM IPSUM COMERCIO DE VESTUÁRIO LTDA.|CNPJ:01.111.000/0001-01/RUA DAS COVES, 100, CENTRO, NOVA
+                    FRIBURGO/RJ-26.600-000</p>
                 <a href=""><img src="./imgs/icons/wx3Icon.PNG" alt="wx3Picture"></a>
             </div>
 
             <div>
-                <p>Preços e condições de pagamento exclusivos para comprar via internet. Ofetas válidas até o término de nossos estoques para internet. Vendas sujeitas à análise e confirmação de dados. em caso de divergência de preços no site, o valor válido é o do Carrinho de Compras.</p>
+                <p>Preços e condições de pagamento exclusivos para comprar via internet. Ofetas válidas até o término de
+                    nossos estoques para internet. Vendas sujeitas à análise e confirmação de dados. em caso de
+                    divergência de preços no site, o valor válido é o do Carrinho de Compras.</p>
             </div>
         </section>
     </footer>
-    <script src="./script.js"></script>
 </body>
 
 </html>
