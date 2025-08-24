@@ -83,17 +83,239 @@
         <section class="carrosel-container">
             <h3>Lançamentos</h3>
 
-            <div class="carrosel-itens">
+            <!-- Preciso q esses carinhas funcionem -->
+            <!-- da uma olhada na imagem, eles ficam no canto, e tem q passar cada item ou com a setinha, ou clicando na bolinha -->
+            <!-- se precisar vc adiciona mais itens, vou marcar da onde até onde, caso precise -->
+            <!-- tem q deixar igual o da imagem, só falta fazer funcionar -->
+            <!-- qualquer coisa vc pode deixar isso de lado e ir fazer a responsividade -->
+            <div class="pass-itens">
                 <button class="slider-arrow prev-arrow">&#10094</button>
+                <input type="radio" name="radio-btn" id="radio-01">
+                <input type="radio" name="radio-btn" id="radio-02">
+                <input type="radio" name="radio-btn" id="radio-03">
+                <button class="slider-arrow next-arrow">&#10095</button>
+            </div>
+
+            <div class="carrosel-itens">
 
                 <div class="carrosel-object">
                     <!-- produtos -->
+                    <!-- se quiser adicionar mais elementos pra ve se vai funcionar, começa por aq... -->
                     <div class="carrosel-item">
+
                         <div class="produto-image">
-                            <button class="tag-lancamento">Lançamento</button>
+                            <button class="tag-tittle">Lançamento</button>
                             <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
-                            <a href="#"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
-                            <a href="#"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
+                        </div>
+
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
+
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-buy">COMPRE AGORA</button>
+                    </div>
+                    <!-- E termina aq -->
+                    <!-- ai o resto só ir adicionando, eu só adicionei 2 -->
+
+                    <div class="carrosel-item">
+
+                        <div class="produto-image">
+                            <button class="tag-tittle">Lançamento</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
+                        </div>
+
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
+
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-buy">COMPRE AGORA</button>
+                    </div>
+
+                    <div class="carrosel-item">
+
+                        <div class="produto-image">
+                            <button class="tag-tittle">Lançamento</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
+                        </div>
+
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
+
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-buy">COMPRE AGORA</button>
+                    </div>
+
+                    <div class="carrosel-item">
+
+                        <div class="produto-image">
+                            <button class="tag-tittle">Lançamento</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
+                        </div>
+
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
+
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-buy">COMPRE AGORA</button>
+                    </div>
+
+                    <div class="carrosel-item">
+
+                        <div class="produto-image">
+                            <button class="tag-tittle">Lançamento</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
+                        </div>
+
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
+
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-buy">COMPRE AGORA</button>
+                    </div>
+
+                    <div class="carrosel-item">
+
+                        <div class="produto-image">
+                            <button class="tag-tittle">Lançamento</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
+                        </div>
+
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
+
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-buy">COMPRE AGORA</button>
+                    </div>
+
+                    <div class="carrosel-item">
+
+                        <div class="produto-image">
+                            <button class="tag-tittle">Lançamento</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
                         </div>
 
                         <div class="produto-info">
@@ -121,10 +343,13 @@
 
                     <div class="carrosel-item">
                         <div class="produto-image">
-                            <button class="tag-lancamento">Lançamento</button>
+                            <button class="tag-tittle">Lançamento</button>
                             <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
-                            <a href="#"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
-                            <a href="#"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
                         </div>
 
                         <div class="produto-info">
@@ -149,343 +374,239 @@
 
                         <button class="btn-buy">COMPRE AGORA</button>
                     </div>
-
-                    <button class="slider-arrow next-arrow">&#10095</button>
                 </div>
-
             </div>
 
-            <a href="">Ver todos</a>
+            <div class="div-view-all">
+                <a href="#" class="view-all">Ver todos</a>
+            </div>
         </section>
 
         <!-- INFORMAÇÕES DE PAGAMENTO -->
-        <section>
-            <div>
-                <img src="./imgs/icons/boxIcon.png" alt="boxIcon">
+        <section class="pagamento-container">
+            <div class="pagamento-item">
+                <img src="./imgs/icons/boxIcon.png" alt="boxIcon" class="item-img-01">
                 <p>FRETE GRÁTIS A PARTIR DE R$199 (SUDESTE) E R$299 (Brasil)</p>
             </div>
 
-            <div>
+            <div class="pagamento-item">
                 <img src="./imgs/icons/qrcodeIcon.png" alt="qrcodeIcon">
                 <p>10% DE DESCONTO NO BOLETO BANCÁRIO/DEPÓSITO</p>
             </div>
 
-            <div>
+            <div class="pagamento-item">
                 <img src="./imgs/icons/cartaoIcon01.png" alt="cartaoIcon01">
                 <p>ATÉ 10X SEM JUROS NOS CARTÕES DE CRÉDITO</p>
             </div>
 
-            <div>
-                <img src="./imgs/icons/cartaoIcon02.png" alt="cartaoIcon02">
+            <div class="pagamento-item">
+                <img src="./imgs/icons/cartaoIcon02.png" alt="cartaoIcon02" class="item-img-02">
                 <p>PAGAMENTO COM ATÉ 2 CARTÕES</p>
             </div>
         </section>
 
         <!-- DESTAQUES SECTION -->
-        <section>
+        <section class="carrosel-container">
             <h3>Destaques</h3>
-
-            <!-- OPTION BUTTONS -->
-            <div class="navigation">
-                <input type="radio" name="radio-btn" id="Destaq-radio-01">
-                <input type="radio" name="radio-btn" id="Destaq-radio-02">
-                <input type="radio" name="radio-btn" id="Destaq-radio-03">
+            <div class="pass-itens">
+                <button class="slider-arrow prev-arrow">&#10094</button>
+                <input type="radio" name="radio-btn" id="radio-01">
+                <input type="radio" name="radio-btn" id="radio-02">
+                <input type="radio" name="radio-btn" id="radio-03">
+                <button class="slider-arrow next-arrow">&#10095</button>
             </div>
 
-            <div class="carrosel">
-                <div>
-                    <div>
-                        <p>Destaque</p>
-                        <img src="./imgs/pictures/lingerie1.png" alt="lingerie1">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
+            <div class="carrosel-itens">
+
+                <div class="carrosel-object">
+                    <div class="carrosel-item">
+
+                        <div class="produto-image">
+                            <button class="tag-tittle">Destaque</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
+                        </div>
+
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
+
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-buy">COMPRE AGORA</button>
                     </div>
 
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
-                    </div>
+                    <div class="carrosel-item">
 
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
+                        <div class="produto-image">
+                            <button class="tag-tittle">Destaque</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
+                        </div>
 
-                        <button>COMPRE AGORA</button>
-                    </div>
-                </div>
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
 
-                <div>
-                    <div>
-                        <p>Destaque</p>
-                        <img src="./imgs/pictures/lingerie.png" alt="lingerie">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
-                    </div>
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
 
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
-
-                        <button>COMPRE AGORA</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <p>Destaque</p>
-                        <img src="./imgs/pictures/lingerie1.png" alt="lingerie1">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
-
-                        <button>COMPRE AGORA</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <p>Destaque</p>
-                        <img src="./imgs/pictures/lingerie.png" alt="lingerie">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
-
-                        <button>COMPRE AGORA</button>
+                        <button class="btn-buy">COMPRE AGORA</button>
                     </div>
                 </div>
             </div>
 
-            <a href="">Ver todos</a>
+            <div class="div-view-all">
+                <a href="#" class="view-all">Ver todos</a>
+            </div>
         </section>
 
         <!-- INFORMAÇÕES CONTEÚDO -->
-        <section>
-            <div>
+        <section class="infoConteudo-container">
+            <div class="div-info info01">
                 <h1>Camisolas</h1>
                 <p>Para quem quer relaxar</p>
-                <button>VEJA MAIS</button>
+                <button class="vejaMais-btn">VEJA MAIS</button>
             </div>
 
-            <div>
+            <div class="div-info">
                 <h1>Linha noite</h1>
                 <p>Para quem ama praticidade</p>
-                <button>VEJA MAIS</button>
+                <button class="vejaMais-btn">VEJA MAIS</button>
             </div>
 
-            <div>
+            <div class="div-info">
                 <h1>Sutiã</h1>
                 <p>Para quem ama conforto</p>
-                <button>VEJA MAIS</button>
+                <button class="vejaMais-btn">VEJA MAIS</button>
             </div>
         </section>
 
 
         <!-- OUTLET SECTION -->
-        <section>
-            <h3>Outlet</h3>
-
-            <!-- OPTION BUTTONS -->
-            <div class="navigation">
-                <input type="radio" name="radio-btn" id="Outlet-radio-01">
-                <input type="radio" name="radio-btn" id="Outlet-radio-02">
-                <input type="radio" name="radio-btn" id="Outlet-radio-03">
+        <section class="carrosel-container">
+            <h3>Outlets</h3>
+            <div class="pass-itens">
+                <button class="slider-arrow prev-arrow">&#10094</button>
+                <input type="radio" name="radio-btn" id="radio-01">
+                <input type="radio" name="radio-btn" id="radio-02">
+                <input type="radio" name="radio-btn" id="radio-03">
+                <button class="slider-arrow next-arrow">&#10095</button>
             </div>
 
-            <div class="carrosel">
-                <div>
-                    <div>
-                        <p>Outlet</p>
-                        <img src="./imgs/pictures/lingerie1.png" alt="lingerie1">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
+            <div class="carrosel-itens">
+
+                <div class="carrosel-object">
+                    <div class="carrosel-item">
+
+                        <div class="produto-image">
+                            <button class="tag-tittle">Outlet</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
+                        </div>
+
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
+
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
+
+                        <button class="btn-buy">COMPRE AGORA</button>
                     </div>
 
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
-                    </div>
+                    <div class="carrosel-item">
 
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
+                        <div class="produto-image">
+                            <button class="tag-tittle">Outlet</button>
+                            <a href="#"><img src="./imgs/pictures/lingerie1.png" alt="" class="img-principal"></a>
+                            <div class="interact-itens">
+                                <a href="#" class="fav"><img src="./imgs/icons/whiteHeartIcon.png" alt="">FAVORITAR</a>
+                                <a href="#" class="view"><img src="./imgs/icons/viewIcon.png" alt="">ESPIAR</a>
+                            </div>
+                        </div>
 
-                        <button>COMPRE AGORA</button>
-                    </div>
-                </div>
+                        <div class="produto-info">
+                            <ul class="stars-list">
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                                <li><img src="./imgs/icons/starIcon.png" alt=""></li>
+                            </ul>
+                        </div>
 
-                <div>
-                    <div>
-                        <p>Outlet</p>
-                        <img src="./imgs/pictures/lingerie.png" alt="lingerie">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
-                    </div>
+                        <div class="produto-description">
+                            <ul class="info-list">
+                                <li class="descricao-item-01">Lorem Ipsum quia dolor sit amet</li>
+                                <li class="descricao-item-02">ref: pdc</li>
+                                <li class="preco-item-01">R$ 55,90</li>
+                                <li class="preco-item-02">no boleto</li>
+                                <li class="preco-item-03">em até 10x de R$6,30</li>
+                            </ul>
+                        </div>
 
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
-
-                        <button>COMPRE AGORA</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <p>Outlet</p>
-                        <img src="./imgs/pictures/lingerie1.png" alt="lingerie1">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
-
-                        <button>COMPRE AGORA</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div>
-                        <p>Outlet</p>
-                        <img src="./imgs/pictures/lingerie.png" alt="lingerie">
-                        <a href=""><img src="./imgs/icons/whiteHeartIcon.png" alt="whiteHeartIcon">FAVORITAR</a>
-                        <a href=""><img src="./imgs/icons/viewIcon.png" alt="viewIcon">ESPIAR</a>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 1"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 2"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 3"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 4"></a></li>
-                            <li><a href=""><img src="./imgs/icons/starIcon.png" alt="Star 5"></a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li>Lorem Ipsum quia dolor sit amet</li>
-                            <li>ref:pdc</li>
-                            <li>R$55,90</li>
-                            <li>no boleto</li>
-                            <li>em até 10x de R$6,30</li>
-                        </ul>
-
-                        <button>COMPRE AGORA</button>
+                        <button class="btn-buy">COMPRE AGORA</button>
                     </div>
                 </div>
             </div>
 
-            <a href="">Ver todos</a>
+            <div class="div-view-all">
+                <a href="#" class="view-all">Ver todos</a>
+            </div>
         </section>
-
         <!-- SEGUNDO BANNER -->
-        <section>
-            <div>
+        <section class="banner-fixo-container">
+            <div class="div-bannerFixo">
                 <h1>BANNER</h1>
                 <h3>(FIXO)</h3>
             </div>
