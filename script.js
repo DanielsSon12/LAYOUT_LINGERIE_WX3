@@ -16,66 +16,103 @@ function passaImagem() {
 
 }
 
-(function initProductsCarousel(){
-  const root = document.querySelector(".carrosel-container");
-  if (!root) return;
+document.addEventListener('DOMContentLoaded', function () {
+    const todosOsCarrosseis = document.querySelectorAll('.carrosel-container');
 
-  const viewport = root.querySelector(".carrosel-itens");
-  const track    = root.querySelector(".carrosel-object");
-  const items    = Array.from(track.querySelectorAll(".carrosel-item"));
-  const prevBtn  = root.querySelector(".prev-arrow");
-  const nextBtn  = root.querySelector(".next-arrow");
-  const dotsBox  = root.querySelector(".dots");
+    todosOsCarrosseis.forEach(container => {
+        const carousel = container.querySelector('.carrosel');
+        if (!carousel) return;
 
-  const VISIBLE = 4;                               // 4 por página (print 1)
-  const pages   = Math.ceil(items.length / VISIBLE);
-  let page = 0;
+        const items = container.querySelectorAll('.carrosel-item');
+        const nextButton = container.querySelector('.carrosel-btn.next');
+        const prevButton = container.querySelector('.carrosel-btn.prev');
+        const navControls = container.querySelector('.carrosel-nav');
+        const dotsContainer = container.querySelector('.indicadores');
+        const verTodosLink = container.querySelector('.ver-todos');
 
-  // Se não tem navegação, esconde controles e sai
-  if (pages <= 1){
-    prevBtn.style.display = "none";
-    nextBtn.style.display = "none";
-    dotsBox.style.display = "none";
-    return;
-  }
+        if (items.length === 0) return;
 
-  // cria bolinhas
-  dotsBox.innerHTML = "";
-  for (let i = 0; i < pages; i++){
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "dot" + (i === 0 ? " active" : "");
-    b.addEventListener("click", () => goTo(i));
-    dotsBox.appendChild(b);
-  }
-  const dots = Array.from(dotsBox.children);
+        const itemsPerPage = 4;
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+        let currentPage = 0;
+        let isShowingAll = false;
 
-  function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
+        carousel.style.width = `${totalPages * 100}%`;
 
-  function goTo(p){
-    page = clamp(p, 0, pages - 1);
+        function setupNavigation() {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = '';
 
-    // índice do 1º item da página
-    const idx = page * VISIBLE;
-    const target = items[idx];
+            for (let i = 0; i < totalPages; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    currentPage = i;
+                    updateCarousel();
+                });
+                dotsContainer.appendChild(dot);
+            }
 
-    // desloca o trilho para alinhar o item à borda esquerda do viewport
-    const x = target ? target.offsetLeft : 0;
-    track.style.transform = `translate3d(${-x}px,0,0)`;
+            if (totalPages <= 1) {
+                if (nextButton) nextButton.style.display = 'none';
+                if (prevButton) prevButton.style.display = 'none';
+            }
+        }
 
-    // UI
-    dots.forEach((d,i)=> d.classList.toggle("active", i === page));
-    prevBtn.disabled = page === 0;
-    nextBtn.disabled = page === pages - 1;
-  }
+        function updateCarousel() {
+            if (!isShowingAll) {
+                const offset = -(currentPage * (100 / totalPages));
+                carousel.style.transform = `translateX(${offset}%)`;
+                if (dotsContainer) {
+                    const currentDots = dotsContainer.querySelectorAll('.dot');
+                    currentDots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentPage);
+                    });
+                }
+            }
+        }
 
-  // setas
-  prevBtn.addEventListener("click", () => goTo(page - 1));
-  nextBtn.addEventListener("click", () => goTo(page + 1));
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                if (totalPages > 1) {
+                    currentPage = (currentPage + 1) % totalPages;
+                    updateCarousel();
+                }
+            });
+        }
 
-  // mantém alinhado após resize
-  window.addEventListener("resize", () => goTo(page));
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                if (totalPages > 1) {
+                    currentPage = (currentPage - 1 + totalPages) % totalPages;
+                    updateCarousel();
+                }
+            });
+        }
 
-  // start
-  goTo(0);
-})();
+        if (verTodosLink) {
+            verTodosLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                isShowingAll = !isShowingAll;
+                container.classList.toggle('show-all', isShowingAll);
+                if (isShowingAll) {
+                    this.innerHTML = 'Ver menos';
+                    if (navControls) navControls.style.display = 'none';
+                    carousel.style.transform = 'translateX(0%)';
+                } else {
+                    this.innerHTML = 'Ver todos';
+                    if (navControls) navControls.style.display = 'flex';
+                    if (totalPages > 1) {
+                        if (nextButton) nextButton.style.display = 'flex';
+                        if (prevButton) prevButton.style.display = 'flex';
+                    }
+                    updateCarousel();
+                }
+            });
+        }
+
+        setupNavigation();
+        updateCarousel();
+    });
+});
